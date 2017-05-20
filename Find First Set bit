@@ -1,0 +1,25 @@
+/* Amazon Interview
+
+Given an integer an N, write a program to print the position of first set
+bit found from right side in the binary representation of the number.
+
+*/
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int num;
+	    cin>>num;
+	    if(num==0)
+	        cout<<num<<endl;
+	    else
+	        cout<<log2((num) & (-num))+1<<endl;
+	}
+	return 0;
+}
