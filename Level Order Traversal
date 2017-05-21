@@ -1,0 +1,29 @@
+/* Amazon Interview
+The task is to complete the method which takes one argument, root of Binary Tree.
+The struct Node has a data part which stores the data, pointer to left child and pointer to right child.
+There are multiple test cases. For each test case, this method will be called individually.
+*/
+
+/* A binary tree Node
+struct Node
+{
+    int data;
+    Node* left, * right;
+}; */
+
+//You are required to complete this method
+#include<queue>
+void levelOrder(Node* node)
+{
+  if(!node)return;
+  queue<Node*>q;
+  q.push(node);
+  while(!q.empty())
+  {
+      Node*temp=q.front();
+      q.pop();
+      cout<<temp->data<<" ";
+      if(temp->left)q.push(temp->left);
+      if(temp->right)q.push(temp->right);
+  }
+}
