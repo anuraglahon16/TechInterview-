@@ -1,0 +1,35 @@
+/* Accencture ,Wipro,SAP
+The task is to complete bubble function which is used to implement Bubble Sort.
+
+Input:
+First line of the input denotes number of test cases 'T'. First line of the test case is the size of array and second line consists of array elements.
+
+
+Output:
+Sorted array in increasing order is displayed to the user.
+*/
+
+
+
+/* A function to implement bubble sort */
+
+
+void bubbleSort(int arr[], int n)
+{
+   for (int i = 0; i < n-1; i++)      
+        bubble(arr, i, n);
+} 
+
+void bubble(int arr[], int i, int n)
+{int temp,j;
+    for(j=n-1;j>0;j--)
+    {
+        if(arr[j]<arr[j-1])
+        {
+            temp = arr[j];
+            arr[j]=arr[j-1];
+            arr[j-1]=temp;
+        }
+    }
+    // Your code here  
+}
