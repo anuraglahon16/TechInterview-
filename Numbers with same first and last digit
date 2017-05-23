@@ -1,0 +1,38 @@
+/* Amazon question
+
+Given an range of number's starting with integer L and ending at R,
+the task is to count the numbers which have same first and last digits.
+
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int l,r;
+	    cin>>l>>r;
+	    int answer = 0;
+	    for(int i=l;i<=r;i++)
+	    {
+            if(i<10)
+	            {answer++;
+	            continue;}
+            int lastnum = i%10,firstnum;
+            int k=i;
+            while(k!=0)
+            {
+                k/=10;
+                if(k!=0)
+                    firstnum=k;
+            }
+            if(firstnum==lastnum)
+                answer++;
+	    }
+	    cout<<answer<<endl;
+	}
+	return 0;
+}
